@@ -1,1 +1,1 @@
-drf-twoways
+django-rest-framework-twoways

@@ -1,0 +1,4 @@
+django-rest-framework-twoways
+
+
+Django Rest Framework module to add support for different serializers for GET and POST.
