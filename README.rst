@@ -1,7 +1,7 @@
-django-emailauth
+django-rest-framework-twoways
 ============
 
-Django - custom user model with email authentication.
+Extension to Django REST Framework to make it eaiser to set different serializer for input and output of one view.
 
 Note : still in development - although ready to use.
 
@@ -19,41 +19,28 @@ To get the latest commit from GitHub
 
     pip install -e git+git://github.com/enthusiastmartin/django-emailauth.git#egg=djangoemailauth
 
-[Optional] Add ``djangoemailauth`` to your ``INSTALLED_APPS``. This is necessary only if built-in ``EmailUser`` is used ( see Usage below for details )
-
-.. code-block:: python
-
-    INSTALLED_APPS = (
-        ...,
-        'djangoemailauth',
-    )
-
-
 Usage
 -----
 
-``EmailUser``
-
-Make sure to add djangoemailauth to installed apps.
-
-Update ``settings.py`` to tell Django to use MyUser
+Very simple usage. You can use provided mixin or view.
 
 .. code-block:: python
 
-     AUTH_USER_MODEL = 'djangoemailauth.EmailUser'
+    from rest_frame_work_twoways.views import TwoWayAPiView
 
-``AbstractEmailUser``
+    class YourView(TwoWayAPIView):
+        input_serializer_class = PostSerializer
+        output_serializer_class = GetSerializer
 
-.. code-block:: python
 
-    from djangoemailauth.models import AbstractEmailUser
-
-    class MyUser(AbstractEmailUser):
-         ** extend User model with your attributes **
-
-Update ``settings.py`` to tell Django to use MyUser
+Only mixin:
 
 .. code-block:: python
 
-     AUTH_USER_MODEL = '<your module>.MyUser'
+    from rest_frame_work_twoways.mixins import TwoWaySerializerMixin
+
+    class YourView(TwoSerializerMixin, generics.ListCreateAPIView):
+        input_serializer_class = PostSerializer
+        output_serializer_class = GetSerializer
+
 
