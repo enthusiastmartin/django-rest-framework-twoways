@@ -9,4 +9,4 @@ class TwoWaySerializerMixin(object):
         if str(self.request.method).lower() in ['get']:
             return self.output_serializer_class
 
-        return self.output_serializer_class
+        return self.input_serializer_class

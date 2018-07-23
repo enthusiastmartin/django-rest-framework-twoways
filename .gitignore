@@ -11,3 +11,5 @@ dist/
 docs/_build/
 local_settings.py
 build/
+db.sqlite3
+migrations/
