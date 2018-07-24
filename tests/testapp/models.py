@@ -13,3 +13,6 @@ class Post(models.Model):
 
     blog = models.ForeignKey(Blog, on_delete=models.CASCADE, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
+    class Meta:
+        ordering = ['id', ]
