@@ -58,3 +58,12 @@ class TestTwoWayOutputView(APITestCase):
         self.assertEqual(data[1]['id'], self.post02.id)
         self.assertDictEqual(data[0], self.postSer.data)
         self.assertDictEqual(data[1], self.postSer02.data)
+
+
+class TestSerializerNotSet(APITestCase):
+    def setUp(self):
+        self.client = APIClient()
+
+    def test_request(self):
+        with self.assertRaises(AssertionError):
+            self.client.get(reverse("notset_path"))

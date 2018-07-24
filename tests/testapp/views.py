@@ -10,3 +10,7 @@ class PostListCreateView(TwoWayAPiView, generics.ListCreateAPIView):
     output_serializer_class = PostOutputSerializer
 
     queryset = Post.objects.all()
+
+
+class SerializerNotSetView(TwoWayAPiView, generics.ListCreateAPIView):
+    queryset = Post.objects.all()

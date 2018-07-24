@@ -5,4 +5,7 @@ from .mixins import TwoWaySerializerMixin
 
 
 class TwoWayAPiView(TwoWaySerializerMixin, GenericAPIView):
+    """
+    Main Two way view which supports input/output serializer.
+    """
     pass
