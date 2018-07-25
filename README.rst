@@ -17,23 +17,12 @@ To get the latest commit from GitHub
 
 .. code-block:: bash
 
-    pip install -e git+git://github.com/enthusiastmartin/django-emailauth.git#egg=djangoemailauth
+    pip install -e git+git://github.com/enthusiastmartin/django-rest-framework-twoways.git#egg=rest_framework_twoways
 
 Usage
 -----
 
-Very simple usage. You can use provided mixin or view.
-
-.. code-block:: python
-
-    from rest_frame_work_twoways.views import TwoWayAPiView
-
-    class YourView(TwoWayAPIView):
-        input_serializer_class = PostSerializer
-        output_serializer_class = GetSerializer
-
-
-Only mixin:
+Very simple usage. You can use provided mixin.
 
 .. code-block:: python
 
@@ -42,5 +31,4 @@ Only mixin:
     class YourView(TwoSerializerMixin, generics.ListCreateAPIView):
         input_serializer_class = PostSerializer
         output_serializer_class = GetSerializer
-
 
