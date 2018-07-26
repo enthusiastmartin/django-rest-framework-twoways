@@ -10,3 +10,7 @@ class TwoWaySerializerMixin(object):
             return self.output_serializer_class
 
         return self.input_serializer_class
+
+
+class TwoWayViewSetMixin(object):
+    pass
