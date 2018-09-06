@@ -6,9 +6,9 @@ with open('README.rst') as f:
 
 
 setup(
-    name='djangorestframework-twoways',
+    name='djangorestframework_twoways',
     version='0.0.1',
-    url='https://github.com/enthusiastmartin/django-rest-framework-twoways',
+    url='https://github.com/enthusiastmartin/djangorestframework_twoways',
     license='MIT',
     long_description=README,
     description='Different serializers for GET and POST',
